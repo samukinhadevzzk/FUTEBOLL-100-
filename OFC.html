@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissão ao Vivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        #liveVideo {
+            display: none;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        #watchButton {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #watchButton:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Transmissão ao Vivo</h1>
+        <p>Clique no botão abaixo para assistir ao evento ao vivo.</p>
+        <button id="watchButton" onclick="startLive()">ASSISTA AO VIVO</button>
+        <div id="liveVideo">
+            <h2>Evento Ao Vivo</h2>
+            <iframe id="eventStream" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        function startLive() {
+            document.getElementById('liveVideo').style.display = 'block';
+            document.getElementById('watchButton').style.display = 'none';
+            document.getElementById('eventStream').src = 'https://multicanais.love/assistir-sao-paulo-x-ferroviaria-ao-vivo-online-02-09-2024/';
+        }
+    </script>
+</body>
+</html>
